@@ -1,0 +1,171 @@
+:root{
+    /* colores primarios */
+    --primarySoftBlue: hsl(215, 51%, 70%);
+    --primaryCyan: hsl(178, 100%, 50%);
+    /* colores secundarios */
+    --neutralDarkBlueMain:  hsl(217, 54%, 11%);
+    --neutralDarkBlueCard: hsl(216, 50%, 16%);
+    --neutralDarkBlueLine: hsl(215, 32%, 27%);
+    --neutralWhite: hsl(0, 0%, 100%);
+    /* fonts */
+    --fuentePrincipal: 'Outfit', sans-serif;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;/*convertimos 1rem a 10px*/
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+}
+/* Gloabales */
+.contenedor{
+    max-width: 120rem;
+    width: 85%;
+    margin: 0 auto;
+}
+h1{
+    font-weight: 600;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+/* utilidades */
+.tex-center{
+    text-align: center;
+}
+/* fondo card */
+.contenedorCard{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--neutralDarkBlueMain);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* card */
+.cardAlineacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Contenido card */
+.card{
+    width: 100%;
+    height: 83vh;
+    max-width: 32rem;
+    max-height: 52rem;
+    min-width: 31.8rem;
+    min-height: 51.8rem;
+    background-color: var(--neutralDarkBlueCard);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.card__imagen{
+    width: 100%;
+    height: 58%;
+    background-image: url(../images/image-equilibrium.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.card__imagen:hover{
+    cursor: pointer;
+}
+.card__imagen--color{
+    width: 100%;
+    height: 100%;
+}
+.card__imagen--color:hover{
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: hsla(178, 100%, 50%, 0.5);
+}
+
+.contenidoCard_titulo{
+    color: var(--neutralWhite);
+    font-size: 2.2rem;
+}
+.contenidoCard__descripcion{
+    font-weight: 300;
+    color: var(--primarySoftBlue);
+    margin: .5rem 0;
+}
+.cardInformacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--neutralDarkBlueLine);
+}
+.cardInformacion__eth{
+    color: var(--primaryCyan);
+    font-weight: 600;
+    display: flex;
+}
+.cardInformacion__eth:before{
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.cardInformacion__tiempo{
+    color: var(--primarySoftBlue);
+    display: flex;
+}
+.cardInformacion__tiempo::before{
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../images/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.cardInformacion__eth,
+.cardInformacion__tiempo{
+    margin: 1.5rem 0;
+}
+.card__autor{
+    color: var(--primarySoftBlue);
+    display: flex;
+    align-items: center;
+}
+.card__autor::before{
+    content: '';
+    display: block;
+    width: 3.4rem;
+    height: 3.4rem;
+    background-image: url(../images/image-avatar.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--neutralWhite);
+}
+.card__autor--blanco{
+    color: var(--neutralWhite);
+}
+.contenidoCard_titulo:hover,
+.card__autor--blanco:hover{
+    color: var(--primaryCyan);
+    cursor: pointer;
+}
+.attribution { 
+    font-size: 11px; text-align: center;
+    color: var(--neutralWhite); 
+}
+.attribution a { 
+    color: var(--primaryCyan); 
+}
